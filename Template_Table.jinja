@@ -1,0 +1,10 @@
+CREATE TABLE {{table|capitalize}}
+(
+{% for columnName,columnTitle in columns %}
+  {{columnName}}  VARCHAR2(100) {% if not loop.last %},{% endif %}
+{% endfor %}
+);
+
+{% for columnName,columnTitle in columns %}
+COMMENT ON COLUMN {{table|capitalize}}.{{columnName}} IS '{{columnTitle[1]}}';
+{% endfor %}
