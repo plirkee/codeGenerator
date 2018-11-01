@@ -1,0 +1,4 @@
+:This is variable list
+table:client_table
+project:first_project
+description:A simple description
